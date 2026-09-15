@@ -7,6 +7,10 @@ class Inksgame < Formula
   sha256 "9c87f65ad3ef02d166a5dc815db25c496c8434e5dc47b254d5d7f04179b3d3b3"
   depends_on "go" => :build
 
+  bottle do
+    root_url "https://github.com/Luca295DEV/homebrew-tap"
+  end
+
   def install
     system "go", "build", *std_go_args(ldflags: "-X main.version=#{version}")
   end

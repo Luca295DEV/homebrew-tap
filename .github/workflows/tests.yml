@@ -1,44 +1,30 @@
-name: brew test-bot
+name: Bottler
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   pull_request:
+  workflow_dispatch:
 
 jobs:
-  test-bot:
+  bottles:
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-14, macos-15]
+        # Add or remove platforms as needed
+        os: [macos-13, macos-14, ubuntu-latest]
     runs-on: ${{ matrix.os }}
-    permissions:
-      actions: read
-      checks: read
-      contents: read
-      pull-requests: read
     steps:
       - name: Set up Homebrew
-        id: set-up-homebrew
-        uses: Homebrew/actions/setup-homebrew@main
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+        uses: homebrew/actions/setup-homebrew@master
 
-      - name: Cache Homebrew Bundler RubyGems
-        uses: actions/cache@v4
-        with:
-          path: ${{ steps.set-up-homebrew.outputs.gems-path }}
-          key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
-          restore-keys: ${{ matrix.os }}-rubygems-
+      - name: Build bottle
+        run: |
+          brew test-bot --only-cleanup-before
+          brew test-bot --only-setup
+          brew test-bot --only-tap-syntax
+          brew test-bot --only-formulae --build-bottle
 
-      - run: brew test-bot --only-cleanup-before
-
-      - run: brew test-bot --only-setup
-
-      - run: brew test-bot --only-formulae --testing-formulae=inksgame
-
-      - name: Upload bottles as artifact
-        if: always()
+      - name: Upload bottle artifact
         uses: actions/upload-artifact@v4
         with:
           name: bottles_${{ matrix.os }}
