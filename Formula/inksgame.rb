@@ -8,11 +8,10 @@ class Inksgame < Formula
   depends_on "go" => :build
 
   def install
-    system "go", "build", *std_go_args(ldflags: "-X main.version="+self.version)
+    system "go", "build", *std_go_args(ldflags: "-X main.version=#{version}")
   end
 
   test do
-    assert_match version.to_s, shell_output("#{bin}/inksgame --version 2>&1", 0)
+    assert_match version.to_s, shell_output("#{bin}/inksgame --version 2>&1")
   end
-
 end
