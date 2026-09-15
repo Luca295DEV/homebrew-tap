@@ -1,7 +1,7 @@
 class Inksgame < Formula
-    desc "design games in Inkscape, apply logic in your engine of choice"
+    desc "Design games in Inkscape, apply logic in your engine of choice."
     homepage "https://codeberg.org/Luca295/inksgame"
-    url "https://codeberg.org/Luca295/inksgame/archive/master.zip"
+    url "https://codeberg.org/Luca295/inksgame/archive/refs/tags/beta5.tar.gz"
     version "beta5"
     license "MIT"
     sha256 "9c87f65ad3ef02d166a5dc815db25c496c8434e5dc47b254d5d7f04179b3d3b3"
