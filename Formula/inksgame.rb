@@ -4,6 +4,7 @@ class Inksgame < Formula
     url "https://codeberg.org/Luca295/inksgame/archive/master.zip"
     version "beta5"
     license "MIT"
+    sha256 "9c87f65ad3ef02d166a5dc815db25c496c8434e5dc47b254d5d7f04179b3d3b3"
     depends_on "go" => :build
 
     def install
