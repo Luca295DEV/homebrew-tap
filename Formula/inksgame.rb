@@ -7,22 +7,22 @@ class Inksgame < Formula
   on_macos do
     on_arm do
       url "https://codeberg.org/Luca295/inksgame/releases/download/beta5/inksgame-darwin-arm64.zip"
-      sha256 "a78ddf0ccad4ad9e32a499aee923e5225a26042b930c2b4e3923d2e472e9ec18"
+      sha256 "d14b93f153aa6c948637b205c64abe73d746dc96407685a3d50ec9a74bbccb5e"
     end
     on_intel do
       url "https://codeberg.org/Luca295/inksgame/releases/download/beta5/inksgame-darwin-amd64.zip"
-      sha256 "1303b2b97e96c23c8fbaa05e5ab4d861eed07d5285c59dc4b9dcb48d833b5d6e"
+      sha256 "393c5fe25fe0fdd17feb127cbebdd0a56f0f4509375e16518ed40431581eb873"
     end
   end
 
   on_linux do
     on_arm do
       url "https://codeberg.org/Luca295/inksgame/releases/download/beta5/inksgame-linux-arm64.zip"
-      sha256 "e67433cf61eaa4680d36540ce6b9dbc3feb92d9ca0712d05f364df1d985c59f8"
+      sha256 "c6c636b674e0529e673bb8293a21c50adce712458eafb4923cf0b2ec57eca14f"
     end
     on_intel do
       url "https://codeberg.org/Luca295/inksgame/releases/download/beta5/inksgame-linux-amd64.zip"
-      sha256 "ae3dcddb091d067f694abfc6cc6f0070d9ccf0b94b9a808f93403b8f4978454e"
+      sha256 "a4a993989a1b4e6ff68c1fbe878958a53b200929e5b66cc1319bcb5061f0ba96"
     end
   end
 
