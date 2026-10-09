@@ -7,22 +7,22 @@ class Memoird < Formula
   on_macos do
     on_arm do
       url "https://codeberg.org/Luca295/memoird/releases/download/0.0.0/memoird-darwin-arm64.zip"
-      sha256 "41cd95caf524369495318e56710e609ac4ba0fad28c383a3de22e4bee7b92cfa"
+      sha256 "925c9ea3c812b737dc33cb3fc9e9d9908e487fd63db83cac32000cfad34cf31b"
     end
     on_intel do
       url "https://codeberg.org/Luca295/memoird/releases/download/0.0.0/memoird-darwin-amd64.zip"
-      sha256 "c0dd7521cf0547854cfdb7e5ecfe82f7c92ca2278b55582c4fd0b1b90e0a8d76"
+      sha256 "22744712e659ed6caf4325dd8be9ee813735906035d2be44796d5d1e32051759"
     end
   end
 
   on_linux do
     on_arm do
       url "https://codeberg.org/Luca295/memoird/releases/download/0.0.0/memoird-linux-arm64.zip"
-      sha256 "c9bb77ff4054d0e19ec1d99763c6399681eeb581dcee09bf14eb80ed482a68e7"
+      sha256 "1b3675383f9535d05618c21b8d0e43040019873d0c097ca5a7d2e647e51c1d18"
     end
     on_intel do
       url "https://codeberg.org/Luca295/memoird/releases/download/0.0.0/memoird-linux-amd64.zip"
-      sha256 "dea30aee12a78de336be08f9333b29ae65f3a7ae174bb6787cb365654de5ff16"
+      sha256 "e60aeb7a03457d63f9aff37d1dfedb708b1f6b75e45f4b0ef53a5a80bde61a2c"
     end
   end
 
